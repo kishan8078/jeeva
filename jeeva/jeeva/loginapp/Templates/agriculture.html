@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../static/index.css"/>
+    <link rel="icon" href="{% static 'tilogo.png' %}" >
+    <title>Agriculture</title>
+</head>
+<body>
+    <div class="flex justify-center  ">
+        <nav class="self-center w-full max-w-7xl  ">
+            <div class="flex flex-col lg:flex-row justify-around items-center ">
+                <div class="">
+                <a href="/indexPage"><img src="./static/logo.svg" class="h-12 w-12" alt=""></a>
+                </div>
+                
+                <ul class="hidden lg:flex items-center text-[18px] font-semibold pl-32 ">
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Lend</button>
+                        <div class="dropdown-content">
+                          <a href="/agriculturePage">Agriculture</a>
+                          <a href="/enterprisePage">Small Enterprise</a>
+                          <a href="/educationPage">Education</a>
+                          <a href="/healthPage">Food and Health</a>
+                          
+                        </div>
+                    </div>
+
+                    <a href="/borrowPage"><button class="ml-7">Borrow</button></a>
+
+                    <div class="dropdown ml-7">
+                        <button class="dropbtn">About</button>
+                        <div class="dropdown-content">
+                          <a href="/aboutUsPage">About Us</a>
+                          <a href="/jeevaworkPage">How Jeeva Works</a>
+                          <a href="/impactPage">Impact</a>
+                          <a href="/pressPage">Press</a>
+                        </div>
+                    </div>
+
+                    
+                </ul>
+                <div class=" text-center text-base pr-5  inline-flex">   
+                    <a href="/LoginSignUpPage "><button class="bg-indigo-500 hover:bg-black text-white hover:text-white font-bold ml-5 py-2 px-4 rounded text-align:">
+                      Sign Up
+                  </button></a>    
+                    <div class="ml-10">
+                          <a href="/LoginSignUpPage"><button class="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded text-align:">
+                            Sign In
+                    </button></a>
+                        
+                </div>
+                        
+                        
+                </div>
+                
+        </nav>
+    </div>
+
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="./static/old_man.jpeg">
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class=" title-font text-gray-500 tracking-widest text-2xl">UJJAIN</h2>
+              <h1 class="text-gray-900 text-7xl title-font font-medium mb-1">KAMAL HATKE</h1>
+              
+              <p class="leading-relaxed text-2xl py-3">A loan of 3 Lakh Rupees will help him to implement efficient irrigation systems and increase the yield.</p>
+              <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+                
+                
+              </div>
+              <div class="flex">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill px-2" style="width: 20% ;"><b>60K/300K</b></div>
+                  </div>
+                <button class="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded">Lend</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="google_element">
+        <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+            function loadGoogleTranslate() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en', // specify the page language
+                    autoDisplay: false // set to true if you want the translation to be displayed automatically
+                }, 'google_element');
+            }
+        </script>
+        <script>
+            // Call the function to load Google Translate
+            loadGoogleTranslate();
+        </script>
+    </div>
+</body>
+</html>

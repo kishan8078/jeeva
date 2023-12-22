@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./static/impact.css"/>
+    <link rel="icon" href="{% static 'tilogo.png' %}" >
+    <title>borrow</title>
+</head>
+<body>
+    <div class="flex justify-center  ">
+        <nav class="self-center w-full max-w-7xl  ">
+            <div class="flex flex-col lg:flex-row justify-around items-center ">
+                <div class="">
+                <a href="/indexPage"><img src="./static/logo.svg" class="h-12 w-12" alt=""></a>
+                </div>
+                
+                <ul class="hidden lg:flex items-center text-[18px] font-semibold pl-32 ">
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Lend</button>
+                        <div class="dropdown-content">
+                          <a href="/agriculturePage">Agriculture</a>
+                          <a href="/enterprisePage">Small Enterprise</a>
+                          <a href="/educationPage">Education</a>
+                          <a href="/healthPage">Food and Health</a>
+                          
+                        </div>
+                    </div>
+
+                    <a href="/borrowPage"><button class="ml-7">Borrow</button></a>
+
+                    <div class="dropdown ml-7">
+                        <button class="dropbtn">About</button>
+                        <div class="dropdown-content">
+                          <a href="/aboutUsPage">About Us</a>
+                          <a href="/jeevaworkPage">How Jeeva Works</a>
+                          <a href="/impactPage">Impact</a>
+                          <a href="/pressPage">Press</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class=" text-center text-base pr-5  inline-flex">   
+                        <a href="/LoginSignUpPage "><button class="bg-indigo-500 hover:bg-black text-white hover:text-white font-bold ml-5 py-2 px-4 rounded text-align:">
+                          Sign Up
+                      </button></a>    
+                        <div class="ml-10">
+                              <a href="/LoginSignUpPage"><button class="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded text-align:">
+                                Sign In
+                        </button></a>
+                            
+                    </div> 
+                        
+                </div>
+        </nav>
+    </div>
+
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-5xl text-4xl  title-font mb-4 text-gray-900 font-bold">JEEVA'S IMPACT</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-2xl text-base">You made a real impact in the nation with every loan this year.</p>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 bg-violet-400 rounded-lg">
+                
+                <h2 class="title-font font-medium text-3xl text-gray-100 ">₹80,00,000
+                </h2>
+                <p class="leading-relaxed text-gray-100">Total Lent</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg bg-violet-500">
+                
+                <h2 class="title-font font-medium text-3xl text-gray-100">500</h2>
+                <p class="leading-relaxed text-gray-100">Loans Funded</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 bg-violet-400 rounded-lg">
+                
+                <h2 class="title-font font-medium text-3xl text-gray-100">1,200</h2>
+                <p class="leading-relaxed text-gray-100">People Reached</p>
+              </div> 
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="border-2 border-gray-200 px-4 py-6 rounded-lg bg-violet-500">
+                
+                <h2 class="title-font font-medium text-3xl text-gray-100">24</h2>
+                <p class="leading-relaxed text-gray-100">States</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full">
+            <h1 class="sm:text-4xl text-4xl  title-font mb-4 text-gray-900 font-semibold">Make a Donation and add your impact.</h1>
+            <h1 class="lg:w-2/3 mx-auto leading-relaxed text-4xl text-base py-2">Donations are vital for us to continue helping people.</h1>
+            <button class="container hover:bg-black text-Black hover:text-white font-bold py-2 px-4 rounded">
+               DONATE
+              </button>
+          </div>
+          
+        </div>
+        
+        </section>
+        
+
+
+        <div id="google_element">
+            <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+            <script>
+                function loadGoogleTranslate() {
+                    new google.translate.TranslateElement({
+                        pageLanguage: 'en', // specify the page language
+                        autoDisplay: false // set to true if you want the translation to be displayed automatically
+                    }, 'google_element');
+                }
+            </script>
+            <script>
+                // Call the function to load Google Translate
+                loadGoogleTranslate();
+            </script>
+        </div>
+</body>
+</html>

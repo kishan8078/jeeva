@@ -1,0 +1,91 @@
+{% load static %}
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="{% static 'borrowform.css' %}">
+   <title>Borrow Request Form </title>
+</head>
+<body>
+   <div class="flex-container">
+  <nav class="nav-bar">
+    <div class="logo-container">
+      <a href="./index.html"><img src="{% static 'logo.svg' %}" alt="Logo"></a>
+    </div>
+    
+  </nav>
+</div>
+
+
+
+   <div class="container">
+       <header>
+           <h1 id='title'>Borrow Request Form</h1>
+           <p id='description'>
+               Say goodbye to barriers and hello to a financially inclusive future! 🌐💳 Our Borrow Request Form, fortified with a commitment to zero percent interest loan
+           </p>
+       </header>
+
+       <form id='survey-form'>
+           <div class='form-input'>
+               <label id='name-label'>Full Name (As per Aadhaar)</label>
+               <input type='text' id='name' placeholder='Enter your name' class='form-input-size' required/>
+           </div>
+           <div class='form-input'>
+               <p>Gender</p>
+               <select id='dropdown' class='form-input-size' required>
+                   <option disabled selected value>Select Gender</option>
+                   <option value='Male'>Male</option>
+                   <option value='Female'>Female</option>
+                   <option value='Other'>Other</option>
+               </select>
+           </div>
+           <div class='form-input'>
+               <label id='number-label'>Age
+                   <span>(Minimum Age is 18)</span>
+               </label>
+               <input type='number' id='number' placeholder='25' min='18' max='80' class='form-input-size' />
+           </div>
+
+           <div class='form-input'>
+        <label id='aadhaar-label' for='Verify'>Aadhaar Number</label>
+        <input type='text' id='Verify' placeholder='Enter your Aadhaar Number' class='form-input-size' required pattern="\d{12}" maxlength="12" title="Please enter a 12-digit Aadhaar number" required/>
+        <button id="verifyButton" class="verify-button">Verify</button>
+        <span class="loading-icon">Loading...</span>
+        <span class="tick-icon" id="tick">&#10004;Verified</span>
+        <p class="error-message">Please enter a valid Aadhaar number.</p>
+    </div>
+
+           <div class='form-input'>
+               <p>Choose the Category</p>
+               <select id='dropdownCategory' class='form-input-size' required>
+                   <option disabled selected value>Select Category</option>
+                   <option value='Male'>Agriculture</option>
+                   <option value='Female'>Education</option>
+                   <option value='Other'>Food & Health</option>
+                   <option value='Other'>Small Enterprises</option>
+               </select>
+           </div>
+
+
+           <div class='form-input'>
+               <p>Provide a brief description about your necessity for the loan</p>
+               <textarea type='text' placeholder='Enter the description' required></textarea>
+           </div>
+
+           <div class='form-input'>
+            <label for="photoUpload">Upload Photo:</label>
+            <input type="file" id="photoUpload" name="photo" accept="image/*" required/>
+        </div>
+
+           <div class='form-input'>
+               <button type='submit' id='submit'>Submit Borrow Request</button>
+           </div>
+       </form>
+   </div>
+
+    <script src="{% static 'borrowform.js' %}"></script>
+
+</body>
+</html>

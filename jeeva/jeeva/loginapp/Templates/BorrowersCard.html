@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="{% static 'tilogo.png' %}" >
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:row;
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+<h2 style="text-align:center">User Profile Card</h2>
+{% for eachOfBorrowModel in AllBorrowModel %}
+    <div class="card">
+        {% comment %} <img src="{{ eachOfBorrowModel.borrower_img}}" alt="Borrower Image" style="width: 100%"> {% endcomment %}
+    <h1 class="full-name">{{eachOfBorrowModel.full_name}}</h1>
+    <p class="gender">{{eachOfBorrowModel.gender}}</p>
+        <p class="age">{{eachOfBorrowModel.age}}</p>
+        <p class="Aadhaar">{{eachOfBorrowModel.adhaar_number}}</p>
+        <p class="description">{{eachOfBorrowModel.description}}</p>
+        <p class="Category">{{eachOfBorrowModel.category}}</p>
+
+    <p><button>Contact</button></p>
+    </div>
+{% endfor %}
+
+</div>
+
+<div id="google_element">
+    <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        function loadGoogleTranslate() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', // specify the page language
+                autoDisplay: false // set to true if you want the translation to be displayed automatically
+            }, 'google_element');
+        }
+    </script>
+    <script>
+        // Call the function to load Google Translate
+        loadGoogleTranslate();
+    </script>
+</div>
+</body>
+</html>

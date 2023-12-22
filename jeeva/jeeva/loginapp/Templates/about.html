@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css"/>
+    <link rel="icon" href="{% static 'tilogo.png' %}" >
+    <title>about</title>
+</head>
+<body>
+    <div class="flex justify-center  ">
+        <nav class="self-center w-full max-w-7xl  ">
+            <div class="flex flex-col lg:flex-row justify-around items-center ">
+                <div class="">
+                <a href="./index.html"><img src="./assets/logo.svg" class="h-12 w-12" alt=""></a>
+                </div>
+                
+                <ul class="hidden lg:flex items-center text-[18px] font-semibold pl-32 ">
+                    
+                    <div class="dropdown">
+                        <button class="dropbtn">Lend</button>
+                        <div class="dropdown-content">
+                          <a href="./agriculture.html">Agriculture</a>
+                          <a href="./enterprise.html">Small Enterprise</a>
+                          <a href="./education.html">Education</a>
+                          <a href="./health.html">Food and Health</a>
+                          
+                        </div>
+                      </div>
+
+                    <button class="ml-7">Borrow</button>
+
+                    <div class="dropdown ml-7">
+                        <button class="dropbtn">About</button>
+                        <div class="dropdown-content">
+                          <a href="./about.html">About Us</a>
+                          
+                          <a href="./impact.html">Impact</a>
+                         
+                        </div>
+                      </div>
+
+                    
+                </ul>
+                <div class=" text-center text-base pr-5  inline-flex">   
+                    <button class="bg-indigo-500 hover:bg-black text-white hover:text-white font-bold ml-5 py-2 px-4 rounded text-align:">
+                        Sign Up
+                    </button>    
+                    <div class="ml-10">
+                        <button class="bg-white hover:bg-black text-black hover:text-white font-bold py-2 px-4 rounded text-align:">
+                                Sign In
+                        </button>
+                        
+                </div>
+                    
+                        
+                </div>
+                
+        </nav>
+    </div>
+    <div class="flex justify-center flex">
+        <img alt="content" class="lg:w-4/6 md:w-3/6 w-5/6 mb-10 py-4 object-cover object-center rounded" src="./assets/aboutus.jpg">
+
+    </div>
+    
+    <h1 class="lg:w-2/3 mx-auto leading-relaxed text-3xl justify-center font-semibold">Over 1.7 billion people globally lack access to financial services, facing challenges in securing the resources they require. Jeeva, a nonprofit organization, is dedicated to promoting financial inclusion and fostering the prosperity of underserved communities.</h1>
+    <h1 class="lg:w-2/3 mx-auto leading-relaxed text-2xl py-4 justify-center">Our approach involves gathering funds through crowdfunding for loans, unlocking capital for those in need, enhancing the affordability and quality of financial services, and addressing the fundamental barriers to financial access on a global scale. Jeeva's initiatives empower women to establish businesses, enable farmers to invest in essential equipment, and assist families in affording necessary emergency care.</h1>
+    <h1 class="lg:w-2/3 mx-auto leading-relaxed text-xl py-4  text-align-center text-indent-10">Our approach involves gathering funds through crowdfunding for loans, unlocking capital for those in need, enhancing the affordability and quality of financial services, and addressing the fundamental barriers to financial access on a global scale. Jeeva's initiatives empower women to establish businesses, enable farmers to invest in essential equipment, and assist families in affording necessary emergency care.</h1>
+
+    <div id="google_element">
+        <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+        <script>
+            function loadGoogleTranslate() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en', // specify the page language
+                    autoDisplay: false // set to true if you want the translation to be displayed automatically
+                }, 'google_element');
+            }
+        </script>
+        <script>
+            // Call the function to load Google Translate
+            loadGoogleTranslate();
+        </script>
+    </div>
+</body>
+</html>
